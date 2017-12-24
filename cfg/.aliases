@@ -1,0 +1,18 @@
+# os
+alias ll='ls -lrta'
+
+# dates
+alias now='date +"%Y/%m/%d %H:%M:%S"'
+alias ts='date +%Y%m%d%H%M%S'
+alias epoch='date +%s'
+
+
+# git
+alias gl='git log --oneline --decorate'
+alias gpom='git pull origin master'
+alias gdom=' git diff origin/master'
+alias gb='git branch'
+alias gs='git status'
+alias gfp='git fetch -p; git pull'
+alias gcm='git checkout master'
+alias gc='git checkout'
