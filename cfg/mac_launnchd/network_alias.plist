@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.sziraki.alias.wendy</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/local/bin/network_alias</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>UserName</key>
+    <string>ROOT</string>
+    <key>Group</key>
+    <string>WHEEL</string>
+    <key>StandardOutPath</key>
+    <string>/var/log/myjob.log</string>
+    <key>StandardErrorPath</key>
+    <string>/var/log/myjob.log</string>
+    <key>Debug</key>
+    <true/>
+</dict>
+</plist>

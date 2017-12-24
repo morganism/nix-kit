@@ -1,0 +1,6 @@
+#!/bin/bash
+echo Running
+echo Running > /var/log/network_alias
+ifconfig en0 alias 192.168.0.99 
+echo Running2 > /var/log/network_alias
+
