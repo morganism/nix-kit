@@ -1,2 +1,17 @@
 # nix-kit
-Portable Unix/Linux config &amp; tools I use everywhere
+Portable Unix/Linux config &amp; tools I use everywhere that I don't want to lose, copy between system
+Basically, I want my same setup every time I have a login on a unix like box.
+
+## DOES include :
+* home dir config: .bashrc, .profile, .ssh/config, .vimrc, etc
+* system config (if I have root)
+* helper scripts
+* templates
+
+## Does NOT include*:
+* keys: ssh, gpg, etc
+* passwords
+* account numbers
+
+ * Encrypted in the **secrets** repo
+
