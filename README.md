@@ -13,5 +13,5 @@ Basically, I want my same setup every time I have a login on a unix like box.
 * passwords
 * account numbers
 
- * Encrypted in the **secrets** repo
+<b>*<\b> Encrypted in the **secrets** repo
 
