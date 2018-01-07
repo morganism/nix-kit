@@ -1,0 +1,35 @@
+#-----------------------------------------------------------
+# why look it up ?
+#
+# Run backup 2x per day 3am & 9pm
+# 00 03,21 * * * /opt/bin/backup
+# Every hour between 9am & 6pm Only Weekdays
+# 00 09-18 * * 1-5 /opt/bin/backup
+# Every 10 minutes
+# */10 * * * * /opt/bin/backup
+#
+#-----   Keywords -----------
+# Keyword	Equivalent
+# @yearly	0 0 1 1 *
+# @daily	0 0 * * *
+# @hourly	0 * * * *
+# @reboot	Run at startup.
+# 
+# at 00:00 on Jan 1st for every year.
+# @yearly /opt/bin/yearly/happy_new_year.rb
+#
+# redirect mail to another user
+# MAIL="majordomo""
+#
+# do not send mail
+# MAIL="""
+#-----------------------------------------------------------
+#*    *    *    *    *    command to be executed
+#-    -    -    -    -
+#|    |    |    |    |
+#|    |    |    |    +----- day of week  (0 - 6) (Sunday=0)
+#|    |    |    +---------- month        (1 - 12)
+#|    |    +--------------- day of month (1 - 31)
+#|    +-------------------- hour         (0 - 23)
+#+------------------------- min          (0 - 59)
+#-----------------------------------------------------------
