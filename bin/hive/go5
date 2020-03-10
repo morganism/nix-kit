@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#-----------------------------------
+# morgan.sziraki@gmail.com
+# simplify logging to dev5 instances
+#-----------------------------------
+
+BOX=$1
+
+if [ -z "$BOX" ]; then
+  $BOX="master.morgan5.dev5.bgch.io"
+fi
+
+# repetition
+echo "set -o vi; alias ll='ls -lrta'"
+
+vpc-ssh dev5:morgan5 $BOX
+
