@@ -1,0 +1,65 @@
+#  API Documentation Template 
+
+## Title
+
+<Describe API call. Verbs that match request type and one or many, etc. *GetUsers*>
+
+## URL
+
+<URL Structure (path without base)>
+
+## Method:
+
+<The request type>
+
+DELETE | GET | POST | PUT
+
+
+## URL Parameters
+
+<URL parameters if they exist and whenther optional.>
+
+/users/:id
+
+
+### Required:
+
+id# [int]
+
+
+### Optional:
+
+name# [string]
+
+### POST Params
+
+<If POSTing describe payload here.>
+
+### Success Response:
+
+<What should the status code be on success, and return type/data.>
+
+Code: 200
+Content: { id : 12 }
+
+
+### Error Response:
+
+<List ALL possible Error responses>
+
+Code: 401 UNAUTHORIZED
+Content: { error : "Log in" }
+OR
+
+Code: 444 UNPROCESSABLE
+Content: { error : "User exists" }
+
+
+
+### Example Call:
+
+<curl is always a nice way to show an example>
+
+
+Notes:
+
