@@ -1,0 +1,54 @@
+#!/bin/bash
+#
+# ------------------------------------------------------------------------------
+# @author morgan@morganism.dev
+# @date Sat 14 Oct 2023 13:03:16 BST
+#
+# @desc
+# ------------------------------------------------------------------------------
+#
+now() {
+	date +%Y%m%d%H%M%S
+}
+NEWRUBY="NewRuby_$(now).rb"
+
+if [[ $1 =~ ^- ]]; then # flags ?
+	echo "Options"
+  OPTION=$1
+	shift
+
+	if [[ $OPTION =~ -?bin ]]; then
+		LOCATION=$(echo "${HOME}/bin" | sed 's:^//:/:')
+	fi
+fi
+
+FILENAME=${1:-$NEWRUBY}
+FILE=$(echo "$LOCATION/$FILENAME" | sed 's://:/:')
+LIBDIR=$(dirname $FILE)
+
+echo "New ruby script in : ${FILE}"
+sleep 1
+
+if  [ ! -f $FILE ]; then
+	echo "New File:$FILE"
+	echo '#!/usr/bin/env ruby' > $FILE
+  head -9 $0 | tail -8 >> $FILE
+	echo "require 'optparse'" >> $FILE
+  echo "require 'ostruct'" >> $FILE
+	echo "\$LOAD_PATH.unshift File.expand_path('$LIBDIR', __FILE__)" >> $FILE
+	echo 'module MyModule' >> $FILE
+	echo '  class MyClass' >> $FILE 
+	echo '    def initialize(options = {})' >> $FILE 
+	echo '    end' >> $FILE
+	echo '  end' >> $FILE
+	echo 'end' >> $FILE
+	echo 'if __FILE__ == $0' >> $FILE
+	echo "  o = MyModule::MyClass.new(name: 'a name')" >> $FILE
+	echo '  puts o.class' >> $FILE
+	echo 'end' >> $FILE
+
+
+  chmod 755 $FILE
+fi
+
+exec vi $FILE
