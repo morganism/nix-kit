@@ -1,6 +1,8 @@
 #!/bin/bash
 
-THISDIR=$(realpath $0)
+
+THISSCRIPT=$(realpath $0)
+THISDIR=$(dirname $THISSCRIPT)
 cd ${HOME}/bin
 
 for s in $(echo "vib vir mcd bak.sh os.sh")
