@@ -9,6 +9,8 @@ for s in $(echo "vib vir mcd bak.sh os.sh")
 do
   ln -s ${THISDIR}/${s} .
   echo "linked ${s}"
+  echo "rm ${HOME}/bin/${s}" >> undo
 done
+chmod 755 undo
 
 cd ${THISDIR}
