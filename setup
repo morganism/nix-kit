@@ -7,7 +7,7 @@ cd ${HOME}/bin
 
 for s in $(echo "vib vir mcd bak.sh os.sh")
 do
-  ln -s ${THISDIR}/${s} .
+  ln -s ${THISDIR}/bin/${s} .
   echo "linked ${s}"
   echo "rm ${HOME}/bin/${s}" >> undo
 done
