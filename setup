@@ -1,16 +1,8 @@
 #!/bin/bash
+#
 
+source bin/common.sh # THISSCRIPT, THISDIR
+source bin/functions.sh 
 
-THISSCRIPT=$(realpath $0)
-THISDIR=$(dirname $THISSCRIPT)
-cd ${HOME}/bin
+binlink "vib vir mcd bak.sh os.sh common.sh"
 
-for s in $(echo "vib vir mcd bak.sh os.sh")
-do
-  ln -s ${THISDIR}/bin/${s} .
-  echo "linked ${s}"
-  echo "rm ${HOME}/bin/${s}" >> undo
-done
-chmod 755 undo
-
-cd ${THISDIR}
